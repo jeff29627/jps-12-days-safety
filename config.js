@@ -3,7 +3,7 @@ window.JPS_CONFIG = {
   timezone: 'America/New_York',
   startHour: 7,
   // Set this to the published Microsoft Forms response URL. Use ONE form with a Day dropdown.
-  formUrl: 'PASTE_YOUR_MICROSOFT_FORMS_RESPONSE_URL_HERE',
+  formUrl: 'https://forms.cloud.microsoft/r/mKUGJpsZCE',
   // Optional: public, manually maintained winner names (do not publish without consent).
   winners: {},
   // Enter the exact published GitHub Pages URL after deployment to create a printable QR.
