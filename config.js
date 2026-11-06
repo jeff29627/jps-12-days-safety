@@ -7,7 +7,7 @@ window.JPS_CONFIG = {
   // Optional: public, manually maintained winner names (do not publish without consent).
   winners: {},
   // Enter the exact published GitHub Pages URL after deployment to create a printable QR.
-  siteUrl: 'PASTE_YOUR_GITHUB_PAGES_URL_HERE',
+  siteUrl: 'https://jeff29627.github.io/jps-12-days-safety/',
   challenges: [
     {date:'2026-12-03',topic:'PPE Christmas',prize:'Pick a wrapped Christmas gift',question:'What should you do before entering an area that requires safety glasses?',options:['Wear the required safety glasses','Only wear them when a supervisor is nearby','Wear sunglasses instead'],answer:0,explanation:'Use the PPE required for your work area.'},
     {date:'2026-12-04',topic:'Spot the Hazard',prize:'Pick a wrapped Christmas gift',question:'You see a liquid spill in a walkway. What is the safest response?',options:['Walk around and ignore it','Keep people clear and report it so it can be cleaned safely','Wait until the next shift'],answer:1,explanation:'Protect others and follow the spill response procedure.'},
