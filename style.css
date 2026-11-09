@@ -122,5 +122,160 @@ body.tv #qr {
 
 body.tv #qr img {
   width: 125px;
+
+
+/* JPS CHRISTMAS TV THEME */
+/* Add at the VERY BOTTOM of your CSS file */
+
+/* 1. Animated Christmas lights along the top */
+body.tv header {
+  position: relative;
+  border-bottom: 3px solid #e7bf55;
+  overflow: visible;
+}
+
+body.tv header::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, #ff4a4a 0 4px, transparent 5px)
+      0 2px / 80px 15px repeat-x,
+    radial-gradient(circle, #ffd44f 0 4px, transparent 5px)
+      20px 2px / 80px 15px repeat-x,
+    radial-gradient(circle, #50dc86 0 4px, transparent 5px)
+      40px 2px / 80px 15px repeat-x,
+    radial-gradient(circle, #6bbaff 0 4px, transparent 5px)
+      60px 2px / 80px 15px repeat-x;
+  animation: christmasLights 2s ease-in-out infinite alternate;
+  z-index: 5;
+}
+
+@keyframes christmasLights {
+  from { opacity: .55; filter: brightness(.85); }
+  to { opacity: 1; filter: brightness(1.5); }
+}
+
+/* 2. Falling snow behind the content */
+body.tv .snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .35;
+  background-image:
+    radial-gradient(circle, white 1.5px, transparent 2px),
+    radial-gradient(circle, white 1px, transparent 2px);
+  background-size: 100px 110px, 160px 170px;
+  background-position: 0 0, 40px 65px;
+  animation: christmasSnow 20s linear infinite;
+}
+
+@keyframes christmasSnow {
+  from { background-position: 0 0, 40px 65px; }
+  to { background-position: 0 550px, 40px 405px; }
+}
+
+/* 3. Keep everything above the snow */
+body.tv header,
+body.tv main {
+  position: relative;
+  z-index: 1;
+}
+
+/* 4. Holiday gold border and soft glow */
+body.tv .main-card {
+  position: relative;
+  border: 4px solid #e9bd4e;
+  box-shadow: 0 0 15px rgba(255,215,100,.35);
+}
+
+/* 5. Wrapped presents in the question card corners */
+body.tv .main-card::before {
+  content: "🎁";
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+body.tv .main-card::after {
+  content: "🎁";
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+/* 6. Festive challenge title */
+body.tv .main-card h2 {
+  color: #155c46;
+  text-shadow: 0 1px 1px #e3c46e;
+}
+
+/* 7. Christmas red answer letters */
+body.tv .option b {
+  color: #bc2633;
+}
+
+/* 8. Gold ribbon glow */
+body.tv .ribbon {
+  box-shadow: 0 0 10px rgba(230,185,70,.35);
+}
+
+/* 9. QR code stays visible and scannable */
+body.tv .bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 8px;
+}
+
+body.tv .bottom .info:not(:has(#qr)) {
+  display: none;
+}
+
+body.tv #qr {
+  background: #fff;
+  padding: 8px;
+  margin: 5px auto;
+  box-shadow: 0 0 12px rgba(255,220,100,.3);
+}
+
+body.tv #qr img {
+  display: block;
+  width: 125px;
+  height: 125px;
+  animation: none;
+  filter: none;
+}
+
+/* 10. Keep TV layout compact */
+body.tv main {
+  padding-top: 12px;
+  padding-bottom: 6px;
+}
+
+body.tv .bottom .info:has(#qr) {
+  padding: 8px;
+}
+
+body.tv .question {
+  margin: 8px auto;
+}
+
+/* 11. Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  body.tv .snow,
+  body.tv header::after {
+    animation: none;
+  }
+}
+    
   height: 125px;
 }
