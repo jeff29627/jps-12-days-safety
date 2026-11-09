@@ -454,3 +454,136 @@ body.tv #qr img {
 @media (prefers-reduced-motion: reduce) {
   .snow, header::after { animation: none; }
 }
+
+/* ====================================
+   JPS COLORFUL CHRISTMAS TV UPGRADE
+   ==================================== */
+
+/* Brighter Christmas background */
+body.tv {
+  background:
+    radial-gradient(circle at 15% 25%,
+      rgba(220, 35, 55, .22), transparent 35%),
+    radial-gradient(circle at 85% 65%,
+      rgba(35, 110, 245, .22), transparent 35%),
+    radial-gradient(circle at 50% 5%,
+      rgba(255, 210, 60, .16), transparent 45%),
+    linear-gradient(135deg, #062b24, #155c45, #082d35);
+}
+
+/* Bright multicolor Christmas lights */
+body.tv header {
+  border-bottom: 4px solid #ffd447;
+  box-shadow: 0 3px 18px rgba(255, 210, 60, .5);
+}
+
+body.tv header::after {
+  height: 20px;
+  background:
+    radial-gradient(circle, #ff203c 0 6px, transparent 7px)
+      0 3px / 96px 20px repeat-x,
+    radial-gradient(circle, #ffdc00 0 6px, transparent 7px)
+      24px 3px / 96px 20px repeat-x,
+    radial-gradient(circle, #00f47a 0 6px, transparent 7px)
+      48px 3px / 96px 20px repeat-x,
+    radial-gradient(circle, #15a8ff 0 6px, transparent 7px)
+      72px 3px / 96px 20px repeat-x;
+  animation: colorfulLights 1.5s infinite alternate;
+}
+
+@keyframes colorfulLights {
+  from { opacity: .65; filter: brightness(.85); }
+  to { opacity: 1; filter: brightness(1.7); }
+}
+
+/* Bright Christmas heading */
+body.tv h1 {
+  text-shadow: 0 0 12px rgba(255, 220, 80, .5);
+}
+
+body.tv h1 em {
+  color: #ffcf39;
+}
+
+/* Red, green, and blue statistics boxes */
+body.tv .stats > div:nth-child(1) {
+  background: #8e1f32;
+  border: 2px solid #ff6b75;
+}
+
+body.tv .stats > div:nth-child(2) {
+  background: #146f45;
+  border: 2px solid #55ed9c;
+}
+
+body.tv .stats > div:nth-child(3) {
+  background: #174b9a;
+  border: 2px solid #79b8ff;
+}
+
+body.tv .stats strong {
+  color: #ffe681;
+}
+
+/* Festive red and gold question card */
+body.tv .main-card {
+  border: 5px solid #f5c542;
+  box-shadow:
+    0 0 0 3px #bd2738,
+    0 0 25px rgba(255, 215, 60, .5);
+}
+
+/* Larger presents */
+body.tv .main-card::before,
+body.tv .main-card::after {
+  font-size: 30px;
+  top: 8px;
+}
+
+/* Bright red challenge ribbon */
+body.tv .ribbon {
+  background: linear-gradient(90deg,
+    #b51f35, #ef4054, #b51f35);
+  box-shadow: 0 0 12px rgba(255, 60, 80, .45);
+}
+
+/* Colorful answer choices */
+body.tv .option:nth-child(1) {
+  background: #e4f5e7;
+  border-color: #48aa70;
+}
+
+body.tv .option:nth-child(2) {
+  background: #fff0dc;
+  border-color: #d9aa48;
+}
+
+body.tv .option:nth-child(3) {
+  background: #e5efff;
+  border-color: #6495e6;
+}
+
+/* Festive QR code section */
+body.tv .bottom .info:has(#qr) {
+  border: 3px solid #f4c747;
+  background: linear-gradient(135deg,
+    #0e543e, #134335, #742635);
+  box-shadow: 0 0 15px rgba(255, 215, 60, .25);
+}
+
+body.tv #qr {
+  background: white;
+  border: 3px solid #ffd447;
+  box-shadow: 0 0 15px rgba(255, 215, 60, .5);
+}
+
+/* Keep QR code black and white for scanning */
+body.tv #qr img {
+  filter: none;
+  animation: none;
+}
+
+/* Keep the snowfall visible */
+body.tv .snow {
+  opacity: .5;
+}
