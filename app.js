@@ -7,5 +7,5 @@ function render(){const state=gameState(),item=c.challenges[state.index];$('dayS
     <span>Day ${i + 1} · ${safe(x.date.slice(5))} · ${safe(x.topic)}</span>
     <span>🎁 Pick a Gift</span>
   </div>`
-).join('');;const url='https://forms.cloud.microsoft/r/mKUGJpsZCE';$('qr').innerHTML=`<img alt="QR code for the JPS safety game" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}"><span style="display:block;color:#333;font-size:11px;max-width:190px;overflow-wrap:anywhere">${safe(url)}</span>`;}
+).join('');;const url='https://forms.cloud.microsoft/r/mKUGJpsZCE';$('qr').innerHTML=`<img alt="QR code for the JPS safety game" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(url)}"><span style="display:block;color:#333;font-size:11px;max-width:190px;overflow-wrap:anywhere">${safe(url)}</span>`;}
 render();setInterval(render,30000);})();
